@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Nullable>enable</Nullable>
+		<WarnOn>3390;$(WarnOn)</WarnOn>
+		<Version>1.0.0.0</Version>
+		<Authors>RzR</Authors>
+		<Copyright>RzR</Copyright>
+		<Owners>RzR</Owners>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageIcon>PackageIcon.png</PackageIcon>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<PackageTags>Result;Message;Error;ResultMessage;API;ReturnMessage;Response;FSharp;Minimal</PackageTags>
+		<RepositoryUrl>https://github.com/I-RzR-I/RzR.MinimalResultMessage</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/I-RzR-I/RzR.MinimalResultMessage</PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageDescription>A minimal F# result model for methods and processes: a success or failure, an optional response value and a list of messages. Usable from F# and C#.</PackageDescription>
+		<Summary>A minimal F# result model for methods and processes: a success or failure, an optional response value and a list of messages. Usable from F# and C#.</Summary>
+		<PackageTitle>RzR.MinimalResultMessage</PackageTitle>
+		<Title>RzR.MinimalResultMessage</Title>
+		<RepositoryType>GIT</RepositoryType>
+		<Language>en-US</Language>
+
+		<RootNamespace>RzR.MinimalResultMessage</RootNamespace>
+		<AssemblyName>RzR.MinimalResultMessage</AssemblyName>
+		<PackageReleaseNotes>Initial release. See docs/CHANGELOG.md.</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Models\ResultMessage.fs" />
+		<Compile Include="Modules\ResultMessageDefaults.fs" />
+		<Compile Include="Modules\ExtensionsDefaults.fs" />
+		<Compile Include="Modules\ResultMessageHelpers.fs" />
+		<Compile Include="Abstractions\IMinimalResult.fs" />
+		<Compile Include="MinimalResult.fs" />
+		<Compile Include="Extensions\MinimalResultExtensions.fs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Update="FSharp.Core" Version="9.0.100" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\..\assets\PackageIcon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>

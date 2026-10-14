@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net10.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('Windows'))">net10.0;net48</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+  <ItemGroup><PackageReference Include="xunit.v3" Version="4.0.1" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="..\..\RzR.MinimalResultMessage\RzR.MinimalResultMessage.fsproj" /></ItemGroup>
+  <ItemGroup><Using Include="Xunit" /></ItemGroup>
+</Project>

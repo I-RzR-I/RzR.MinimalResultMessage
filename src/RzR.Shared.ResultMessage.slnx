@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/tests/">
+    <Project Path="tests/RzR.MinimalResultMessage.CSharp.Tests/RzR.MinimalResultMessage.CSharp.Tests.csproj" />
+    <Project Path="tests/RzR.MinimalResultMessage.FSharp.Tests/RzR.MinimalResultMessage.FSharp.Tests.fsproj" />
+  </Folder>
+  <Project Path="RzR.MinimalResultMessage/RzR.MinimalResultMessage.fsproj" />
+</Solution>
